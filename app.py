@@ -201,7 +201,7 @@ def emargement_pro():
 		dates = request.form['dates']
 		lecon = request.form['lecons']
 		absent = request.form['absents']
-		connex = psycopg2.connect(datavbase="dbkkkprngrmpt4", user = "xgslloezogiwvl", password = "552e276530d97324555d75bf5fbaad1b3d50531779eb6639afc7df1a7934ad64", host = "ec2-107-21-216-112.compute-1.amazonaws.com", port = "5432")
+		connex = psycopg2.connect(database="dbkkkprngrmpt4", user = "xgslloezogiwvl", password = "552e276530d97324555d75bf5fbaad1b3d50531779eb6639afc7df1a7934ad64", host = "ec2-107-21-216-112.compute-1.amazonaws.com", port = "5432")
 		cux = connex.cursor()
 		if cours == 'programmation':
 			cux.execute('''CREATE TABLE IF NOT EXISTS prog (dates VARCHAR(15) NOT NULL, lecons VARCHAR(50) NOT NULL, absents VARCHAR(50) NOT NULL)''')
